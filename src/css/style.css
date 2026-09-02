@@ -1144,9 +1144,10 @@ body.cursor-hover .cursor-follower {
 
 .projects__grid {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   gap: 24px;
-  width: max-content;
+  width: 100%;
   padding: 0 clamp(24px, 5vw, 80px) clamp(40px, 6vh, 64px);
   will-change: transform;
 }
@@ -1159,7 +1160,9 @@ body.cursor-hover .cursor-follower {
   border-radius: 28px;
   display: flex;
   flex-direction: column;
-  flex: 0 0 clamp(340px, 36vw, 480px);
+  flex: 1 1 340px;
+  min-width: 300px;
+  max-width: 480px;
   height: clamp(380px, calc(100svh - var(--nav-h) - 320px), 560px);
   gap: 0;
   transition: all var(--transition);
@@ -1803,6 +1806,26 @@ body.cursor-hover .cursor-follower {
     flex-direction: column;
     width: 100%;
     padding: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 12px);
+    min-width: 280px;
+    max-width: 100%;
+    height: auto;
+  }
+  .project-card__visual {
+    display: flex;
+  }
+  .projects__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
   }
 }
 
