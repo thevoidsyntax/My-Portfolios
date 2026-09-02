@@ -7,12 +7,12 @@ const CACHE = 'rw-v3';
 const PRECACHE = [
   '/',
   '/index.html',
-  '/css/style.css',
-  '/js/main.js',
+  '/src/css/style.css',
+  '/src/js/main.js',
   '/manifest.json',
-  '/icons/favicon.svg',
-  '/icons/icon-192.svg',
-  '/icons/icon-512.svg',
+  '/src/icons/favicon.svg',
+  '/src/icons/icon-192.svg',
+  '/src/icons/icon-512.svg',
 ];
 
 // Install — cache essential assets

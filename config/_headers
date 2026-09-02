@@ -7,15 +7,15 @@
   Pragma: no-cache
 
 # Static Assets - Long cache with immutable
-/css/*
+/src/css/*
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: text/css; charset=utf-8
 
-/js/*
+/src/js/*
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: application/javascript; charset=utf-8
 
-/icons/*
+/src/icons/*
   Cache-Control: public, max-age=31536000, immutable
   Content-Type: image/svg+xml
 
