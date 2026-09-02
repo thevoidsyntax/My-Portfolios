@@ -1262,33 +1262,6 @@ body.cursor-hover .cursor-follower {
   margin-top: auto;
 }
 
-/* ===================== PROJECT METRICS ===================== */
-.project-card__metrics {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 12px;
-}
-
-.metric {
-  display: inline-flex;
-  align-items: baseline;
-  gap: 5px;
-  font-size: 13px;
-  color: var(--text-muted);
-  padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border);
-  border-radius: 6px;
-}
-
-.metric strong {
-  font-family: "Space Grotesk", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  color: var(--accent);
-}
-
 /* ===================== CONTACT ===================== */
 .contact {
   background: var(--bg-2);
@@ -1797,16 +1770,26 @@ body.cursor-hover .cursor-follower {
     display: none;
   }
   .projects .container {
-    max-width: var(--container);
-    padding: 0 24px;
+    max-width: 100%;
+    padding: 0;
   }
   .projects .section__header {
-    padding: 0;
+    padding: 0 24px;
   }
   .projects__grid {
+    flex-direction: row;
+    width: max-content;
+    padding: 0 24px;
+  }
+  .project-card {
+    flex: 0 0 340px;
+    height: auto;
+    min-height: 480px;
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 0;
+  }
+  .project-card__visual {
+    display: flex;
   }
 }
 
@@ -1832,16 +1815,18 @@ body.cursor-hover .cursor-follower {
     grid-template-columns: repeat(2, 1fr);
   }
   .project-card {
-    grid-template-columns: 1fr;
-    gap: 20px;
+    flex: 0 0 300px;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
     padding: 28px;
-    flex: none;
-    width: 100%;
-    height: auto;
-    display: grid;
   }
   .project-card__content {
-    display: block;
+    display: flex;
+    flex-direction: column;
+  }
+  .project-card__visual {
+    display: flex;
   }
   .project-card__number {
     font-size: 40px;
