@@ -1163,7 +1163,7 @@ body.cursor-hover .cursor-follower {
   flex: 1 1 340px;
   min-width: 300px;
   max-width: 480px;
-  height: clamp(380px, calc(100svh - var(--nav-h) - 320px), 560px);
+  min-height: 420px;
   gap: 0;
   transition: all var(--transition);
   overflow: hidden;
@@ -1182,6 +1182,9 @@ body.cursor-hover .cursor-follower {
   align-items: flex-end;
   justify-content: flex-start;
   padding-top: 20px;
+  flex-shrink: 0;
+  max-height: 120px;
+  overflow: hidden;
 }
 
 .project-card::after {
@@ -1249,7 +1252,7 @@ body.cursor-hover .cursor-follower {
   margin-bottom: 12px;
   max-width: 600px;
   display: -webkit-box;
-  -webkit-line-clamp: 4;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
