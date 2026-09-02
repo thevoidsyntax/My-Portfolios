@@ -2,6 +2,9 @@
 # STATIC SITE — GITIGNORE
 # =============================================
 
+# Claude Code settings (local, not for repo)
+.claude/
+
 # OS Files
 .DS_Store
 Thumbs.db
